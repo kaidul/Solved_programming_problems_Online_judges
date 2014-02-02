@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1383825799 source:e:\c++\workspace\uva\11420 chest of drawers\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+

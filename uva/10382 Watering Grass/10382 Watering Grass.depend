@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1382549439 source:e:\c++\workspace\uva\10382 watering grass\main.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cmath>
+

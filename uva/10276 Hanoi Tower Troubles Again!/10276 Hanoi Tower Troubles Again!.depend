@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1382820732 source:e:\c++\workspace\uva\10276 hanoi tower troubles again!\main.cpp
+	<cmath>
+	<cstdio>
+	<cstring>
+

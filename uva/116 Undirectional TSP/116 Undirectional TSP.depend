@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1373017116 source:e:\c++\workspace\uva\116 undirectional tsp\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<utility>
+	<set>
+	<math.h>
+

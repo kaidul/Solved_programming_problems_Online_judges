@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1383323310 source:e:\c++\workspace\uva\348 optimal array multiplication sequence\main.cpp
+	<cstdio>
+	<climits>
+	<iostream>
+

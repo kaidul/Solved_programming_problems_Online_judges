@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1383749239 source:e:\c++\workspace\uva\10910 marks distribution\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

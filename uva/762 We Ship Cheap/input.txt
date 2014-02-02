@@ -1,0 +1,22 @@
+3
+JV PT
+KA PT
+KA HP
+JV HP
+
+2
+JV PT
+KA HP
+JV HP
+
+2
+JV PT
+KA HP
+PL LP
+
+4
+a z
+a c
+c b
+m z
+b m

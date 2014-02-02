@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1381406746 source:e:\c++\workspace\uva\11456 trainsorting\main.cpp
+	<cstdio>
+	<iostream>
+	<vector>
+	<cstring>
+	<algorithm>
+

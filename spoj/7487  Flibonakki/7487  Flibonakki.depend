@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1380128988 source:e:\c++\workspace\spoj\7487  flibonakki\main.cpp
+	<vector>
+	<cstdio>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1372749854 source:e:\c++\workspace\uva\583 prime factors\main.cpp
+	<iostream>
+	<vector>
+	<map>
+	<cmath>
+

@@ -1,0 +1,6 @@
+10 AGTCTGACGC
+11 AGTAAGTAGGC
+3 Dog
+3 Dig
+5 Sunday
+7 Saturday

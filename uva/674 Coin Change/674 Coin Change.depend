@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1371058662 source:e:\c++\workspace\uva\674 coin change\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

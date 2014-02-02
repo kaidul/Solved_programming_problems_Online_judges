@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1379882059 source:e:\c++\workspace\uva\11402 ahoy pirates!\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<cmath>
+

@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1368706434 source:e:\c++\workspace\uva\836 largest submatrix\main.cpp
+	<algorithm>
+	<bitset>
+	<cctype>
+	<cmath>
+	<complex>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<deque>
+	<fstream>
+	<iostream>
+	<climits>
+	<map>
+	<memory>
+	<queue>
+	<set>
+	<sstream>
+	<stack>
+	<string>
+	<utility>
+	<vector>
+	<iomanip>
+

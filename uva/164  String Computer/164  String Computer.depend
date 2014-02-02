@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1381789743 source:e:\c++\workspace\uva\164  string computer\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<algorithm>
+

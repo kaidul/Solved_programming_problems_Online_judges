@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1383551486 source:e:\c++\workspace\uva\10576 y2k accounting bug\main.cpp
+	<iostream>
+	<vector>
+	<cstring>
+	<cstdio>
+

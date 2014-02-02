@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1380378547 source:e:\c++\workspace\uva\103060 rat attack\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<cmath>
+	<bitset>
+	<utility>
+	<set>
+	<numeric>
+	<ctime>
+

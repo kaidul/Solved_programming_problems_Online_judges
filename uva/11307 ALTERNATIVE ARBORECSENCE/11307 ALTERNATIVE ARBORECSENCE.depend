@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1383070989 source:e:\c++\workspace\uva\11307 alternative arborecsence\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<vector>
+	<stack>
+	<queue>
+	<map>
+	<algorithm>
+	<climits>
+

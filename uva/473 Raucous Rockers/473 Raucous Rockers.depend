@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1373115738 source:e:\c++\workspace\uva\473 raucous rockers\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cmath>
+	<cstdlib>
+

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1382594944 source:e:\c++\workspace\uva\10037 bridge\main.cpp
+	<queue>
+	<cstdio>
+	<cstring>
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<queue>
+	<sstream>
+

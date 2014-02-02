@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1382996593 source:e:\c++\workspace\uva\216 getting in line\main.cpp
+	<iostream>
+	<vector>
+	<cmath>
+	<stdio.h>
+	<cstring>
+	<algorithm>
+	<limits.h>
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<climits>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<vector>
+	<map>
+	<sstream>
+	<set>
+	<math.h>
+

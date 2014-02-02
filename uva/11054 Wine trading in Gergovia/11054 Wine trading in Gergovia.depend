@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1370398877 source:e:\c++\workspace\uva\11054 wine trading in gergovia\main.cpp
+	<vector>
+	<list>
+	<map>
+	<set>
+	<deque>
+	<queue>
+	<stack>
+	<bitset>
+	<algorithm>
+	<functional>
+	<numeric>
+	<utility>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<cstdio>
+	<cmath>
+	<cstdlib>
+	<cctype>
+	<string>
+	<cstring>
+	<cstdio>
+	<cmath>
+	<cstdlib>
+	<ctime>
+

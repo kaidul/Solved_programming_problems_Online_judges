@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1380212869 source:e:\c++\workspace\uva\193 graph coloring\main.cpp
+	<cstdio>
+	<vector>
+	<bitset>
+

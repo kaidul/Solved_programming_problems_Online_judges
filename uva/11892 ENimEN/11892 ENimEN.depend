@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1371373066 source:e:\c++\workspace\uva\11892 enimen\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<cmath>
+	<bitset>
+	<utility>
+	<set>
+	<numeric>
+

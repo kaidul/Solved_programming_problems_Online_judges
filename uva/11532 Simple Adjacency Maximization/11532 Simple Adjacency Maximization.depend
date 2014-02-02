@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1370760393 source:e:\c++\workspace\uva\11532 simple adjacency maximization\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<cmath>
+

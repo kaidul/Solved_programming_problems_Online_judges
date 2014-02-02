@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1382599087 source:e:\c++\workspace\uva\10202 pairsumonious numbers\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<cmath>
+	<bitset>
+	<utility>
+	<set>
+	<numeric>
+	<time.h>
+	<fstream>
+	<limits>
+	<iomanip>
+	<iterator>
+

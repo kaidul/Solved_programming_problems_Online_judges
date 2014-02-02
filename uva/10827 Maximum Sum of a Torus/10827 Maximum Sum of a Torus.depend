@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1367936989 source:c:\kaidul\c++ workspace\uva\10827 maximum sum of a torus\main.cpp
+	<stdio.h>
+	<string.h>
+	<limits.h>
+	<iostream>
+

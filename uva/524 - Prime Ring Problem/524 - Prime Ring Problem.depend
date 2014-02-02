@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1380389281 source:e:\c++\workspace\uva\524 - prime ring problem\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<utility>
+	<set>
+	<math.h>
+

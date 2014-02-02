@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1382560840 source:e:\c++\workspace\uva\1193 radar installation\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<vector>
+	<map>
+	<set>
+	<queue>
+	<stack>
+	<cstdlib>
+	<cmath>
+	<bitset>
+

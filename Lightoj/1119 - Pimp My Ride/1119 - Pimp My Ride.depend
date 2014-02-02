@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1363516524 source:c:\kaidul\c++ workspace\lightoj\1119 - pimp my ride\main.cpp
+	<algorithm>
+	<bitset>
+	<cctype>
+	<cmath>
+	<complex>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<deque>
+	<fstream>
+	<iostream>
+	<list>
+	<map>
+	<memory>
+	<queue>
+	<set>
+	<sstream>
+	<stack>
+	<string>
+	<utility>
+	<vector>
+	<iomanip>
+
+1381605265 source:e:\c++\workspace\lightoj\1119 - pimp my ride\main.cpp
+	<algorithm>
+	<bitset>
+	<cctype>
+	<cmath>
+	<complex>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<deque>
+	<fstream>
+	<iostream>
+	<list>
+	<map>
+	<memory>
+	<queue>
+	<set>
+	<sstream>
+	<stack>
+	<string>
+	<utility>
+	<vector>
+	<iomanip>
+

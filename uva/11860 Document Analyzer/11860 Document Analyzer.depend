@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1382642517 source:e:\c++\workspace\uva\11860 document analyzer\main.cpp
+	<iostream>
+	<cstring>
+	<cstdio>
+	<map>
+	<sstream>
+

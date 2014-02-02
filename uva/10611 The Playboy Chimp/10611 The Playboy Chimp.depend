@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1370967922 source:e:\c++\workspace\uva\10611 the playboy chimp\main.cpp
+	<iostream>
+	<cstdio>
+	<set>
+

@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1370757287 source:e:\c++\workspace\uva\11567 moliu number generator\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<cmath>
+	<bitset>
+	<utility>
+	<set>
+	<numeric>
+

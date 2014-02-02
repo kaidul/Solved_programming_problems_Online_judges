@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1380369425 source:e:\c++\workspace\uva\725 division\main.cpp
+	<cstdio>
+	<set>
+	<utility>
+	<cmath>
+	<iostream>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1383598887 source:e:\c++\workspace\uva\737 fun coloring\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<vector>
+

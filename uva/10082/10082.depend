@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1365749682 source:c:\kaidul\c++ workspace\uva\10082\main.cpp
+	<iostream>
+	<cstdio>
+	<fstream>
+

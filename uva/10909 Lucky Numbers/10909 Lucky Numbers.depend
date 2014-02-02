@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1363696319 source:c:\kaidul\c++ workspace\uva\10909 lucky numbers\main.cpp
+	<cstdio>
+	<cstring>
+

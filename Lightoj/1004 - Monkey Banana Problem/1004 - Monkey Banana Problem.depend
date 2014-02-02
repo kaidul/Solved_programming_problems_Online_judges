@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1380279259 source:e:\c++\workspace\lightoj\1004 - monkey banana problem\main.cpp
+	<cstdio>
+	<cstring>
+	<iostream>
+

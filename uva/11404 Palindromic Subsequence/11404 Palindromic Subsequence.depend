@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1381666474 source:e:\c++\workspace\uva\11404 palindromic subsequence\main.cpp
+	<cstdio>
+	<iostream>
+	<cstring>
+

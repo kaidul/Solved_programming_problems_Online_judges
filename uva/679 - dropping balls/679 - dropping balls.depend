@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1380360523 source:e:\c++\workspace\uva\679 - dropping balls\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<fstream>
+

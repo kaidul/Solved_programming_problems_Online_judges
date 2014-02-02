@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1379566530 source:e:\c++\workspace\uva\10534 wavio sequence\main.cpp
+	<iostream>
+	<stdio.h>
+	<algorithm>
+	<vector>
+

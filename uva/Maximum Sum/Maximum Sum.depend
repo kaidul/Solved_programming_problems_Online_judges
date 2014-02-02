@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1367898576 source:c:\kaidul\c++ workspace\uva\maximum sum\main.cpp
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<limits.h>
+
+1368698927 source:e:\c++\workspace\uva\maximum sum\main.cpp
+	<algorithm>
+	<bitset>
+	<cctype>
+	<cmath>
+	<complex>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<deque>
+	<fstream>
+	<iostream>
+	<list>
+	<climits>
+	<map>
+	<memory>
+	<queue>
+	<set>
+	<sstream>
+	<stack>
+	<string>
+	<utility>
+	<vector>
+	<iomanip>
+

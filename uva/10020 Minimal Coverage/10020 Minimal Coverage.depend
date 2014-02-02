@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1379685606 source:e:\c++\workspace\uva\10020 minimal coverage\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cmath>
+	<cstdlib>
+	<vector>
+	<algorithm>
+

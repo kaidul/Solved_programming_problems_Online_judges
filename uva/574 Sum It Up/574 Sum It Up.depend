@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1383582739 source:e:\c++\workspace\uva\574 sum it up\main.cpp
+	<cstdio>
+	<iostream>
+	<vector>
+	<map>
+

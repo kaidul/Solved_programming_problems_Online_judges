@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1385525659 source:e:\c++\workspace\uva\10858 unique factorization\main.cpp
+	<iostream>
+	<vector>
+	<deque>
+	<cstdio>
+

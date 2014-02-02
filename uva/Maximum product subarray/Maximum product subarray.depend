@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1367918786 source:c:\kaidul\c++ workspace\uva\maximum product subarray\main.cpp
+	<cstdio>
+	<iostream>
+

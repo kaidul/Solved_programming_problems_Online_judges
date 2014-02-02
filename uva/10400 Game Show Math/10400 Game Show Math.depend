@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1383740186 source:e:\c++\workspace\uva\10400 game show math\main.cpp
+	<stdio.h>
+	<cstring>
+	<string>
+	<vector>
+

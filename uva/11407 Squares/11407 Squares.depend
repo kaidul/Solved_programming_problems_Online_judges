@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1383832300 source:e:\c++\workspace\uva\11407 squares\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cmath>
+	<vector>
+	<climits>
+

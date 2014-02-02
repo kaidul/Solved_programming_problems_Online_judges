@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1381223756 source:e:\c++\workspace\uva\10672 marbles on a tree\main.cpp
+	<string.h>
+	<cstdio>
+	<climits>
+	<cstdlib>
+	<cmath>
+	<iostream>
+	<string>
+	<vector>
+	<map>
+	<set>
+	<bitset>
+	<list>
+	<stack>
+	<queue>
+	<algorithm>
+	<numeric>
+	<sstream>
+

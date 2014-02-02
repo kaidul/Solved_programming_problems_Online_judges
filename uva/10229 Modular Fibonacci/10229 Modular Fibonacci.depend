@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1385384524 source:e:\c++\workspace\uva\10229 modular fibonacci\main.cpp
+	<cstdio>
+	<vector>
+

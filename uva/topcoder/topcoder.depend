@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1371765647 source:e:\contest programming\topcoder\topcoder solution\primalunlicensedcreatures.cpp
+	<string>
+	<algorithm>
+	<vector>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1371770687 source:e:\contest programming\topcoder\topcoder solution\shortersupersum.cpp
+	<string>
+	<vector>
+	<cstring>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1371813454 source:e:\contest programming\topcoder\topcoder solution\thepalindrome.cpp
+	<string>
+	<string>
+	<vector>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1371861134 source:e:\contest programming\topcoder\topcoder solution\numberoffibocalls.cpp
+	<string>
+	<vector>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1371896909 source:e:\contest programming\topcoder\topcoder solution\cuttingbitstring.cpp
+	<string>
+	<vector>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+

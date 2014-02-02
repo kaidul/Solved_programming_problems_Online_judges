@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1390435708 source:e:\c++\workspace\hackerrank\bot saves princess\main.cpp
+	<iostream>
+	<vector>
+	<cstdio>
+

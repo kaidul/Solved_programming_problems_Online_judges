@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1383844179 source:e:\c++\workspace\uva\10520 determine it\main.cpp
+	<stdio.h>
+	<string.h>
+	<climits>
+	<cmath>
+	<iostream>
+

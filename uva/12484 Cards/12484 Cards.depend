@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1382730590 source:e:\c++\workspace\uva\12484 cards\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+

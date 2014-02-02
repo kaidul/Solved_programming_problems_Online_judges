@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1379623979 source:e:\c++\workspace\uva\11790 murcia's skyline\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<stdio.h>
+

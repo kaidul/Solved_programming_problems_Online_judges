@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1370890987 source:e:\c++\workspace\uva\10602 editor nottoobad\main.cpp
+	<limits>
+	<algorithm>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+

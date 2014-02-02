@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1384977245 source:e:\c++\workspace\uva\471  magic numbers\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<map>
+	<algorithm>
+	<vector>
+

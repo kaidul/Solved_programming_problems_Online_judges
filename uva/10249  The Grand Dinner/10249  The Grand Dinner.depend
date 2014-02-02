@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1368662606 source:e:\c++\workspace\uva\10249  the grand dinner\main.cpp
+	<algorithm>
+	<bitset>
+	<cctype>
+	<cmath>
+	<complex>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<deque>
+	<fstream>
+	<iostream>
+	<list>
+	<map>
+	<memory>
+	<queue>
+	<set>
+	<sstream>
+	<stack>
+	<string>
+	<utility>
+	<vector>
+	<iomanip>
+

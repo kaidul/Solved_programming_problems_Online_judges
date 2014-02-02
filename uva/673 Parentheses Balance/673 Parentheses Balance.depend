@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1370265989 source:e:\c++\workspace\uva\673 parentheses balance\main.cpp
+	<cstdio>
+	<stack>
+	<cstring>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1385506927 source:e:\c++\workspace\uva\1200 a dp problem\main.cpp
+	<iostream>
+	<string>
+	<cmath>
+	<cstdio>
+

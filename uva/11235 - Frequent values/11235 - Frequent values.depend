@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1366294891 source:c:\kaidul\c++ workspace\uva\11235 - frequent values\main.cpp
+	<iostream>
+	<vector>
+	<map>
+	<cmath>
+	<fstream>
+
+1385193228 source:e:\c++\workspace\uva\11235 - frequent values\main.cpp
+	<algorithm>
+	<bitset>
+	<cctype>
+	<cmath>
+	<complex>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<deque>
+	<fstream>
+	<iostream>
+	<list>
+	<climits>
+	<map>
+	<memory>
+	<queue>
+	<set>
+	<sstream>
+	<stack>
+	<string>
+	<utility>
+	<vector>
+	<iomanip>
+

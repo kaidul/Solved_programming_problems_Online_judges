@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1370845004 source:e:\c++\workspace\uva\10747 maximum subsequence\main.cpp
+	<cstdio>
+	<cctype>
+	<cassert>
+	<cmath>
+	<algorithm>
+	<vector>
+	<string>
+

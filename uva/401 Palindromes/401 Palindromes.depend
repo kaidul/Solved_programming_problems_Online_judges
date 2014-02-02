@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1382809968 source:e:\c++\workspace\uva\401 palindromes\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<map>
+

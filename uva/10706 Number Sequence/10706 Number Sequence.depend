@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1383638280 source:e:\c++\workspace\uva\10706 number sequence\main.cpp
+	<cstdio>
+	<map>
+

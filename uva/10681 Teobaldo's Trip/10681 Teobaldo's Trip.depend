@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1383400866 source:e:\c++\workspace\uva\10681 teobaldo's trip\main.cpp
+	<cstdio>
+	<vector>
+	<cstring>
+	<iostream>
+

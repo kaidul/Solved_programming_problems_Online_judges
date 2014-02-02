@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1371484954 source:e:\c++\workspace\uva\102 ecological bin packing\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<utility>
+	<set>
+	<math.h>
+

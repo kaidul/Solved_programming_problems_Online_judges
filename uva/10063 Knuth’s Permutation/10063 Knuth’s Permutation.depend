@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1382508602 source:e:\c++\workspace\uva\10063 knuth’s permutation\main.cpp
+	<algorithm>
+	<cstdio>
+	<cstring>
+

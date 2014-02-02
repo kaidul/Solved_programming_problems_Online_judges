@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1382965564 source:e:\c++\workspace\uva\10944 nuts for nuts\main.cpp
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+

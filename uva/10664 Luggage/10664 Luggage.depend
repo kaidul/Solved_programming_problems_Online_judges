@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1381565301 source:e:\c++\workspace\uva\10664 luggage\main.cpp
+	<cstdio>
+	<cstring>
+	<iostream>
+

@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1371488811 source:e:\c++\workspace\uva\105 the skyline problem\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<string>
+	<cctype>
+	<stack>
+	<queue>
+	<list>
+	<vector>
+	<map>
+	<sstream>
+	<utility>
+	<set>
+	<math.h>
+

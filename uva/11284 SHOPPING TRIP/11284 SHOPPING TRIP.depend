@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1383395103 source:e:\c++\workspace\uva\11284 shopping trip\main.cpp
+	<cstdio>
+	<iostream>
+	<cstring>
+	<climits>
+	<cmath>
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1381841199 source:e:\c++\workspace\uva\10635 prince and princess\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<cmath>
+	<algorithm>
+	<vector>
+	<string>
+	<stack>
+	<queue>
+	<map>
+	<sstream>
+

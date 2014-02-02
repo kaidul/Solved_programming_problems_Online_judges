@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1383300223 source:e:\c++\workspace\uva\442 matrix chain multiplication\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

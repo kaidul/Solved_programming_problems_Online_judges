@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1385134067 source:e:\c++\workspace\facebook hacker cup 2014 qualification round\b basketball game\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<queue>
+	<string>
+	<stack>
+

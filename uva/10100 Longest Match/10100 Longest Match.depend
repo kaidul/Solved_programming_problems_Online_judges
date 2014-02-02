@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1381748369 source:e:\c++\workspace\uva\10100 longest match\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<vector>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1371926943 source:e:\c++\workspace\uva\927 integer sequences from addition of terms\main.cpp
+	<iostream>
+	<vector>
+	<cmath>
+	<cstdio>
+

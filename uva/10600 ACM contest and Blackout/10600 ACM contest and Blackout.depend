@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1371630217 source:e:\c++\workspace\uva\10600 acm contest and blackout\main.cpp
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<cctype>
+	<cmath>
+	<iostream>
+	<utility>
+	<fstream>
+	<numeric>
+	<string>
+	<vector>
+	<queue>
+	<map>
+	<algorithm>
+	<set>
+	<sstream>
+	<stack>
+	<list>
+	<iterator>
+	<bitset>
+

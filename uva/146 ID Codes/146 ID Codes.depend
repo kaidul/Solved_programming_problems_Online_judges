@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1370510640 source:e:\c++\workspace\uva\146 id codes\main.cpp
+	<stdio.h>
+	<algorithm>
+	<cstring>
+

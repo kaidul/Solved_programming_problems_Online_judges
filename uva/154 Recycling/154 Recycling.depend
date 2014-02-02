@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1368430479 source:e:\c++\workspace\uva\154 recycling\main.cpp
+	<iostream>
+	<cstdio>
+	<map>
+

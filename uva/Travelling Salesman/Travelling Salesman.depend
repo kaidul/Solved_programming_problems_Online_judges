@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1382985644 source:e:\c++\workspace\uva\travelling salesman\main.cpp
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<algorithm>
+

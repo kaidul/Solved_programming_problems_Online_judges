@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1382957583 source:e:\c++\workspace\uva\10496 collecting beepers\main.cpp
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<iostream>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1383417057 source:e:\c++\workspace\uva\11269 setting problems\main.cpp
+	<string>
+	<cstring>
+	<algorithm>
+	<cstdio>
+	<iostream>
+	<cmath>
+	<queue>
+	<vector>
+	<set>
+	<stack>
+

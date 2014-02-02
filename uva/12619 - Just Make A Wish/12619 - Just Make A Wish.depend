@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1367344184 source:c:\kaidul\c++ workspace\uva\12619 - just make a wish\main.cpp
+	<iostream>
+	<cstdio>
+	<map>
+	<vector>
+	<cmath>
+

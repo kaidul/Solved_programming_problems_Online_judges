@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1383847136 source:e:\c++\workspace\uva\10721 bar code\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

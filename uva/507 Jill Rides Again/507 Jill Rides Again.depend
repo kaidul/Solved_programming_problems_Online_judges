@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1368319173 source:e:\c++\workspace\uva\507 jill rides again\main.cpp
+	<cstdio>
+	<iostream>
+	<vector>
+

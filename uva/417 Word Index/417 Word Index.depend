@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1371729254 source:e:\c++\workspace\uva\417 word index\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<cstdlib>
+	<cctype>
+	<cmath>
+	<vector>
+	<stack>
+	<string>
+	<list>
+	<map>
+	<queue>
+	<sstream>
+

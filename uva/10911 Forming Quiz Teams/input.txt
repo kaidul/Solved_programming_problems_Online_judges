@@ -1,0 +1,9 @@
+2
+kaidul 5 5
+navid 2 2
+rafaf 7 7
+mahbub 9 10
+1
+derek 9 9
+jimmy 10 10
+0

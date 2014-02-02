@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1381234178 source:e:\c++\workspace\uva\10785 the mad numerologist\main.cpp
+	<iostream>
+	<algorithm>
+	<cstring>
+	<cstdio>
+

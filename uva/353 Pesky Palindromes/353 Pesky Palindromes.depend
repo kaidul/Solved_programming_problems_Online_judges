@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1382813473 source:e:\c++\workspace\uva\353 pesky palindromes\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<map>
+

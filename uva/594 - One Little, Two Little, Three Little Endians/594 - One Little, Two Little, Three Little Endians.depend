@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1365688130 source:c:\kaidul\c++ workspace\uva\594 - one little, two little, three little endians\main.cpp
+	<iostream>
+	<cstdio>
+	<fstream>
+	<cstdio>
+	<iostream>
+	<fstream>
+
