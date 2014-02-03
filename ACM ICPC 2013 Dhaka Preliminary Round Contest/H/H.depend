@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1384603535 source:e:\c++\workspace\acm icpc 2013 dhaka preliminary round contest\h\main.cpp
+	<iostream>
+	<cstring>
+	<string>
+	<cstdio>
+

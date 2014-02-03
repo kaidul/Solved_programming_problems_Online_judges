@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1384629984 source:e:\c++\workspace\acm icpc 2013 dhaka preliminary round contest\a\main.cpp
+	<algorithm>
+	<bitset>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cmath>
+	<iostream>
+	<list>
+	<map>
+	<numeric>
+	<queue>
+	<set>
+	<sstream>
+	<stack>
+	<string>
+	<string.h>
+	<vector>
+

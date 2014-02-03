@@ -1,10 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <cstring>
-#include <algorithm>
-#include <queue>
-#include <string>
-#include <stack>
+#include <bits\stdc++.h>
 
 using namespace std;
 
@@ -13,7 +7,7 @@ using namespace std;
 struct playerInfo {
     string name;
     int shot, height;
-    playerInfo() {} // constructor for satisfying horny compiler
+    playerInfo() {}
     playerInfo(string a, int b, int c) {
         name =  a;
         shot = b;
@@ -26,10 +20,10 @@ struct playerInfo {
 } player[Max];
 
 int main(void) {
-//#ifndef ONLINE_JUDGE
-//    freopen("input.txt", "r", stdin);
-//    freopen("basketball_game.txt", "w", stdout);
-//#endif
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("basketball_game.txt", "w", stdout);
+#endif
     int tcase, caseNo = 0;
     scanf("%d", &tcase);
     int n, m, p;
