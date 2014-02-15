@@ -2,12 +2,14 @@
 using namespace std;
 
 typedef long long int64;
+#define Max 41
 
 struct matrix {
-    int64 v[5][5];
+    int64 v[Max][Max];
     int64 row, col; // number of row and column
-};
+}sum;
 int64 mod;
+int n, k;
 
 // multiplies two matrices and returns the result
 matrix multiply(matrix &a, matrix &b) {
@@ -28,8 +30,15 @@ matrix multiply(matrix &a, matrix &b) {
     return ret;
 }
 
+void sum_matrix(matrix &a, matrix &b) {
+    for(int i = 0; i < a.row; ++i) {
+        for(int j =0; j < a.col; ++j) {
+            a[i][j] += b[i][j];
+        }
+    }
+}
+
 // returns mat^p
-/*
 matrix power(matrix mat, int64 p) {
     assert(p >= 1);
     if (p == 1) return mat;
@@ -38,29 +47,10 @@ matrix power(matrix mat, int64 p) {
     ret = multiply(ret, ret);
     return ret;
 }
-*/
 
-// optimized power calculation
-string binary(int64 p) {
-  string ret = "";
-  while (p > 0) {
-    ret += (p % 2 == 0) ? "0" : "1";
-    p /= 2;
-  }
-  reverse(ret.begin(), ret.end());
-  return ret;
-}
+void calculate() {
 
-matrix power(matrix mat, int64 p) {
-  string bin = binary(p);
-  matrix ret = mat;
-  for (int64 i = 1; i < bin.size(); i++) {
-    ret = multiply(ret, ret);
-    if (bin[i] == '1') {
-      ret = multiply(ret, mat);
-    }
-  }
-  return ret;
+
 }
 
 int main() {
@@ -68,23 +58,19 @@ int main() {
     freopen("input.txt", "r", stdin);
 #endif
     int tcase;
-    int a, b, n, m;
-    a = 0, b = 1;
     matrix mat;
-    while ( cin >> n >> m ) {
-        mat.row = mat.col = 2;
-        mat.v[0][0] = mat.v[0][1] = mat.v[1][0] = 1;
-        mat.v[1][1] = 0;
-        mod = 1 << m;
-        if (n < 3) {
-            if (n == 0) cout << a << endl;
-            if (n == 1) cout << b << endl;
-        } else {
-            mat = power(mat, n - 1);
-            int64 ans = b * mat.v[0][0] + a * mat.v[0][1];
-            ans %= mod;
-            cout << ans << endl;
+    while ( cin >> n >> k ) {
+        sum.row = mat.row = sum.col = mat.col = n;
+        for(int i = 0; i < n; ++i) {
+            for(int j = 0; j < n; ++j)
+                sum.v[i][j] = 0;
         }
+        for(int i =0; i < n; ++i) {
+            for(int j = 0; j < n; ++j) {
+                cin >> mat.v[i][j];
+            }
+        }
+        calculate();
     }
     return 0;
 }

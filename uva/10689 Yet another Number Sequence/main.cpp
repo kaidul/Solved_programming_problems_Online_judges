@@ -1,36 +1,35 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cassert>
+#include <cstdio>
 using namespace std;
 
-typedef long long int64;
-
 struct matrix {
-    int64 v[5][5];
-    int64 row, col; // number of row and column
+    int v[5][5];
+    int row, col; // number of row and column
 };
-int64 mod;
+int mod = 10000;
 
 // multiplies two matrices and returns the result
-matrix multiply(matrix &a, matrix &b) {
+matrix multiply(matrix a, matrix b) {
     assert(a.col == b.row);
-    matrix ret;
-    ret.row = a.row;
-    ret.col = b.col;
-    for (int64 i = 0; i < ret.row; i++) {
-        for (int64 j = 0; j < ret.col; j++) {
-            int64 sum = 0;
-            for (int64 k = 0; k < a.col;  k++) {
+    matrix r;
+    r.row = a.row;
+    r.col = b.col;
+    for (int i = 0; i < r.row; i++) {
+        for (int j = 0; j < r.col; j++) {
+            int sum = 0;
+            for (int k = 0; k < a.col;  k++) {
                 sum += a.v[i][k] * b.v[k][j];
                 sum %= mod;
             }
-            ret.v[i][j] = sum;
+            r.v[i][j] = sum;
         }
     }
-    return ret;
+    return r;
 }
 
 // returns mat^p
-/*
-matrix power(matrix mat, int64 p) {
+matrix power(matrix mat, int p) {
     assert(p >= 1);
     if (p == 1) return mat;
     if (p & 1) return multiply(mat, power(mat, p - 1));
@@ -38,10 +37,10 @@ matrix power(matrix mat, int64 p) {
     ret = multiply(ret, ret);
     return ret;
 }
-*/
 
 // optimized power calculation
-string binary(int64 p) {
+/*
+string binary(int p) {
   string ret = "";
   while (p > 0) {
     ret += (p % 2 == 0) ? "0" : "1";
@@ -51,10 +50,10 @@ string binary(int64 p) {
   return ret;
 }
 
-matrix power(matrix mat, int64 p) {
+matrix power(matrix mat, int p) {
   string bin = binary(p);
   matrix ret = mat;
-  for (int64 i = 1; i < bin.size(); i++) {
+  for (int i = 1; i < bin.size(); i++) {
     ret = multiply(ret, ret);
     if (bin[i] == '1') {
       ret = multiply(ret, mat);
@@ -62,6 +61,7 @@ matrix power(matrix mat, int64 p) {
   }
   return ret;
 }
+*/
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -69,19 +69,27 @@ int main() {
 #endif
     int tcase;
     int a, b, n, m;
-    a = 0, b = 1;
-    matrix mat;
-    while ( cin >> n >> m ) {
+
+    cin >> tcase;
+    while (tcase--) {
+        cin >> a >> b >> n >> m;
+        matrix mat;
         mat.row = mat.col = 2;
         mat.v[0][0] = mat.v[0][1] = mat.v[1][0] = 1;
         mat.v[1][1] = 0;
-        mod = 1 << m;
+
+        // preparing mod value
+        mod = 1;
+        for (int i = 0; i < m; i++) mod *= 10;
+        a %= mod, b %= mod;
+
         if (n < 3) {
             if (n == 0) cout << a << endl;
             if (n == 1) cout << b << endl;
+            if (n == 2) cout << (a+b) % mod << endl;
         } else {
             mat = power(mat, n - 1);
-            int64 ans = b * mat.v[0][0] + a * mat.v[0][1];
+            int ans = b * mat.v[0][0] + a * mat.v[0][1];
             ans %= mod;
             cout << ans << endl;
         }

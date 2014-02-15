@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1392423195 source:e:\c++\workspace\solved_programming_problems_online_judges\uva\10689 yet another number sequence\main.cpp
+	<iostream>
+	<cassert>
+	<cstdio>
+
