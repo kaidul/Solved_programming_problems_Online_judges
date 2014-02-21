@@ -24,7 +24,7 @@ struct wrapper {
         state = grid, eval = cost, depth = d, command = cmd;
     }
     bool operator < (const wrapper &other) const {
-//        if(eval == other.eval) return depth > other.depth;
+        if(eval == other.eval) return depth > other.depth;
         return eval > other.eval;
     }
 };
@@ -92,8 +92,8 @@ void AStarHelper(_2D &grid, string cmd, int depth) {
     while(!pQueue.empty()) {
         wrapper poped = pQueue.top();
         pQueue.pop();
-//        cout << depth << endl;
-//        printGrid(poped.state);
+        cout << poped.depth << endl;
+        printGrid(poped.state);
         AStarHelper(poped.state, poped.command, poped.depth);
         if(found) return;
     }
@@ -122,7 +122,7 @@ void AStar(_2D &grid) {
 
 int main(void) {
     freopen("input.txt", "r", stdin);
-//    freopen("output.txt", "w", stdout);
+    freopen("output.txt", "w", stdout);
     _2D grid(Max);
     cin >> k;
     int input;

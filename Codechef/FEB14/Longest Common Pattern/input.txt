@@ -1,0 +1,9 @@
+4
+abcd
+xyz
+abcd
+bcda
+aabc
+acaa
+Codechef
+elfedcc
