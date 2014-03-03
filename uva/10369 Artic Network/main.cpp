@@ -1,26 +1,4 @@
-#include <algorithm>
-#include <bitset>
-#include <cctype>
-#include <cmath>
-#include <complex>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
-#include <deque>
-#include <fstream>
-#include <iostream>
-#include <list>
-#include <map>
-#include <memory>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <string>
-#include <utility>
-#include <vector>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -78,7 +56,7 @@ double kruskal(int a) {
 }
 
 int main() {
-    READ("input.txt");
+//    READ("input.txt");
     int t;
     int x[550], y[550], cost, edge_no, k;
     scanf("%d", &t);

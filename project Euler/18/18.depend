@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1393870211 source:e:\c++\workspace\solved_programming_problems_online_judges\project euler\18\main.cpp
+	<cstdio>
+	<cstring>
+	<iostream>
+

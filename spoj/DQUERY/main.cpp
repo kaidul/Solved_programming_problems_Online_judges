@@ -91,9 +91,10 @@ bool cmp(DQ a,DQ b) {
     return a.qs<b.qs;
 }
 
-int tree[4*mx6],track[mx6],res[mx6],pos[mx6],value[mx6];
+int tree[4*mx6],res[mx6],pos[mx6],value[mx6];
+int n;
 
-void update(int node,int s,int e,int i,int value) {
+void updateHelper(int node,int s,int e,int i,int value) {
     if(i>e||i<s) return;
     if(s==e) {
         tree[node]=value;
@@ -101,8 +102,8 @@ void update(int node,int s,int e,int i,int value) {
     }
     int n=node<<1;
     int mid=(s+e)>>1;
-    update(n,s,mid,i,value);
-    update(n+1,mid+1,e,i,value);
+    updateHelper(n,s,mid,i,value);
+    updateHelper(n+1,mid+1,e,i,value);
     tree[node]=tree[n]+tree[n+1];
 }
 
@@ -116,9 +117,21 @@ int qu(int node,int s,int e,int l,int r) {
     return res1+res2;
 }
 
-int main() {
+void printTree() {
+    cout << "Printing Tree\n";
+    for(int i= 1; i <= 11; ++i) cout << tree[i] << " ";
+    cout << "\n";
+}
+
+void update(int indx, int value) {
+    updateHelper(1, 1, n, indx, value);
+//    printTree();
+}
+
+/* http://stackoverflow.com/a/18554291/1162233 */
+
+int main(void) {
     freopen("input.txt", "r", stdin);
-    int n;
     si(n);
     for1(i,n) si(value[i]);
     int q;
@@ -134,13 +147,15 @@ int main() {
     int j=1;
     for1(i, q) {
         while(j <= a[i].qe) {
-            if(pos[value[j]] != 0)
-                update(1,1,n,pos[value[j]],0);
-            update(1,1,n,j,1);
-            pos[value[j]]=j;
+            if(pos[value[j]] != 0) {
+//                printf("reseting...\n");
+                update(pos[value[j]], 0);
+            }
+            pos[value[j]] = j;
+            update(pos[value[j]], 1);
             j++;
         }
-        res[a[i].np] = qu(1 , 1 , n, a[i].qs , a[i].qe);
+        res[a[i].np] = qu(1 , 1, n, a[i].qs, a[i].qe);
     }
     for1(i, q) P(res[i]);
 
