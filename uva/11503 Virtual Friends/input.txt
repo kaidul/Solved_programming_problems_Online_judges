@@ -1,0 +1,16 @@
+3
+3
+Fred Barney
+Barney Betty
+Betty Wilma
+4
+Kaidul Navid
+Navid Zim
+Zim Rafaf
+Rafaf Manik
+5
+A B
+B C
+D E
+A D
+A C
