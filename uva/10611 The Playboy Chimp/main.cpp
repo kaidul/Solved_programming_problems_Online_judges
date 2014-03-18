@@ -11,12 +11,12 @@ int main() {
     int N, n, Q, q;
     set<int> s;
     scanf("%d", &N);
-    while (N-- && (scanf("%d", &n) == 1))
+    while (N-- and (scanf("%d", &n) == 1))
         s.insert(n);
 
     scanf("%d", &Q);
 
-    while (Q-- && (scanf("%d", &q) == 1)) {
+    while (Q-- and (scanf("%d", &q) == 1)) {
         set<int>::iterator begin = s.begin(), chimp = s.find(q), taller = s.upper_bound(q), end = s.end(), beforeEnd = --end;
 
         if (q < *begin)
