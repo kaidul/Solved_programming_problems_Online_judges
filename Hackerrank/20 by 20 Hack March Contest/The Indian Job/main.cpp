@@ -1,8 +1,7 @@
 /****************************************************
-***   Problem       :
+***   Problem       : The Indian Job
 ***   Author        : Kaidul Islam
 ***   E-mail        : ikaidul@yahoo.com
-***   University    : KUET, Dept. of CSE
 ***   Blog          : http://kaidul.efireit.com
 ****************************************************/
 #include <bits/stdc++.h>
@@ -175,48 +174,95 @@ int toggle(int N, int pos) {
 }
 
 const i64 INFFF = 1e16;
+// greedy approach. WA in some case. Still don't know why :/
+//#define Max 100
+//
+//int N, G;
+//int arr[Max + 1];
+//
+//int main(void) {
+//    int tcase, caseNo = 0;
+//#ifndef ONLINE_JUDGE
+////    READ("input.txt");
+//#endif
+//    SDi(tcase);
+//    while(tcase--) {
+//        SD2(N, G);
+//        rep(i, N) SDi(arr[i]);
+//        sort(arr, arr + N, greater<int>());
+//        bool yes = true;
+//        int Min, robber1 = 0, robber2 = 0;
+//        for(int i = 0; i < N;) {
+//            if(robber1 == 0) robber1 = arr[i++];
+//            if(robber2 == 0 and i < N) robber2 = arr[i++];
+//            Min = min(robber1, robber2);
+//            if(Min <= G) {
+//                robber1 -= Min;
+//                robber2 -= Min;
+//                G -= Min;
+//            } else {
+//                yes = false;
+//                break;
+//            }
+//        }
+//        if(yes and (robber1 or robber2)) {
+//            int M = max(robber1, robber2);
+//            if(G < M) yes = false;
+//        }
+//        if(yes) pf("YES\n");
+//        else pf("NO\n");
+//    }
+//    return 0;
+//}
 
-#define KMax 20
-#define Max (1 << 20)
-#define Mod 1000000009
+#define MAX_N 110
+#define MAX_W 10010
 
-i64 bit[KMax], fact[Max + 1];
+int n;
+int dp[MAX_N+1][MAX_W+1];
+int weight[MAX_N+1];
+int cost[MAX_N+1];
+int CAP;
 
-i64 Power(i64 to, int power) {
-    i64 ret = 1L;
-    while(power) {
-        if(power & 1)
-            ret = (ret * to) % Mod;
-        to = (to * to) % Mod;
-        power >>= 1;
-    }
-    return ret;
+int func(int i, int w) {
+    if(i == n) return 0;
+    if(dp[i][w] != -1) return dp[i][w];
+    int profit1 = 0, profit2 = 0;
+    if(w + weight[i] <= CAP)
+        profit1 = cost[i] + func(i + 1, w + weight[i]);
+
+    profit2 = func(i + 1, w);
+	dp[i][w] = max(profit1, profit2);
+    return dp[i][w];
 }
 
-
-int main(void) {
-    int tcase, caseNo = 0;
-#ifndef ONLINE_JUDGE
-    READ("input.txt");
-#endif
-    bit[0] = 1, fact[0] = 1;
-    FOR(i, 1, KMax - 1) bit[i] = bit[i- 1] << 1;
-    FOR(i, 1, Max - 1) fact[i] = (fact[i - 1] * i) % Mod;
-    int k;
-    while( ~SDi(k) ) {
-        i64 p = bit[k - 1], n = bit[k];
-        i64 A = fact[p] * fact[p] % Mod * 2 % Mod;
-        i64 C = 1, ans;
-
-        FOR(i, 1, n) {
-            if(i >= p) {
-                ans = (A * C) % Mod;
-                C = C * i % Mod * Power(i + 1 - p, Mod - 2) % Mod;
-                pf("%lld\n", ans);
-            } else
-                pf("0\n");
+int main() {
+//    freopen("in.txt","r",stdin);
+    int tcase, G, sum = 0;
+    SDi(tcase);
+    bool notPossible;
+    while(tcase--) {
+        SD2(n, G);
+        notPossible = false;
+        sum = 0;
+        rep(i, n) {
+            SDi(weight[i]);
+            cost[i] = weight[i];
+            sum += weight[i];
+            if(weight[i] > G) {
+                notPossible = true;
+            }
         }
-
+        if(notPossible) {
+            puts("NO");
+            continue;
+        }
+        mem(dp, -1);
+        CAP = G;
+        int ret = func(0, 0);
+        if(sum - ret <= G)
+            puts("YES");
+        else puts("NO");
     }
     return 0;
 }

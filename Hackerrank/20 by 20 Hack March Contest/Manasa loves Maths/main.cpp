@@ -2,7 +2,6 @@
 ***   Problem       :
 ***   Author        : Kaidul Islam
 ***   E-mail        : ikaidul@yahoo.com
-***   University    : KUET, Dept. of CSE
 ***   Blog          : http://kaidul.efireit.com
 ****************************************************/
 #include <bits/stdc++.h>
@@ -176,47 +175,81 @@ int toggle(int N, int pos) {
 
 const i64 INFFF = 1e16;
 
-#define KMax 20
-#define Max (1 << 20)
-#define Mod 1000000009
+#define Max 95
 
-i64 bit[KMax], fact[Max + 1];
+string N;
+string arr[] = {"000", "002", "004", "006", "008", "012", "014", "016", "023", "024", "025",
+                "027", "028", "029", "034", "036", "044", "045", "046", "047", "048", "049", "056",
+                "067", "068", "069", "088", "112", "123", "125", "126", "127", "128", "129", "136",
+                "144", "146", "148", "166", "167", "168", "223", "224", "227", "234", "235", "236",
+                "238", "239", "244", "246", "247", "248", "255", "256", "257", "258", "259", "267",
+                "269", "278", "279", "288", "289", "299", "336", "344", "348", "356", "367", "368",
+                "369", "445", "446", "447", "448", "449", "456", "458", "466", "468", "469", "478",
+                "488", "489", "566", "567", "568", "669", "677", "678", "679", "688", "689", "888"
+               };
 
-i64 Power(i64 to, int power) {
-    i64 ret = 1L;
-    while(power) {
-        if(power & 1)
-            ret = (ret * to) % Mod;
-        to = (to * to) % Mod;
-        power >>= 1;
-    }
-    return ret;
-}
-
+map <char, int> freq;
+map <int, map<char, int> > m;
+vector <char> track[Max];
+bool isDivisible[101];
 
 int main(void) {
     int tcase, caseNo = 0;
 #ifndef ONLINE_JUDGE
     READ("input.txt");
 #endif
-    bit[0] = 1, fact[0] = 1;
-    FOR(i, 1, KMax - 1) bit[i] = bit[i- 1] << 1;
-    FOR(i, 1, Max - 1) fact[i] = (fact[i - 1] * i) % Mod;
-    int k;
-    while( ~SDi(k) ) {
-        i64 p = bit[k - 1], n = bit[k];
-        i64 A = fact[p] * fact[p] % Mod * 2 % Mod;
-        i64 C = 1, ans;
-
-        FOR(i, 1, n) {
-            if(i >= p) {
-                ans = (A * C) % Mod;
-                C = C * i % Mod * Power(i + 1 - p, Mod - 2) % Mod;
-                pf("%lld\n", ans);
-            } else
-                pf("0\n");
+    int len, num = 8;
+    string item;
+    // pre-processing
+    while(num <= 100) {
+        isDivisible[num] = true;
+        num += 8;
+    }
+    rep(i, Max) {
+        item = arr[i];
+        rep(j, 3) {
+            ++m[i][item[j]];
+            track[i].pb(item[j]);
         }
+        track[i].erase( unique(all(track[i])), track[i].end());
+    }
 
+    SDi(tcase);
+    bool done;
+    while(tcase--) {
+        cin >> N;
+        len = N.length();
+        rep(i, len) ++freq[N[i]];
+        if(freq['0'] == len) {
+            pf("YES\n");
+        } else if(len == 1) {
+            if(isDivisible[atoi(N.c_str())]) pf("YES\n");
+            else pf("NO\n");
+        } else if(len == 2) {
+            if(isDivisible[atoi(N.c_str())]) {
+                pf("YES\n");
+            } else {
+                reverse(N.begin(), N.end());
+                if(isDivisible[atoi(N.c_str())])
+                    pf("YES\n");
+                else pf("NO\n");
+            }
+        } else {
+            rep(i, Max) {
+                done = true;
+                for(int j = 0, n = track[i].size(); j < n; ++j) {
+                    if(freq[track[i][j]] < m[i][track[i][j]]) {
+                        done = false;
+                        break;
+                    }
+                }
+                if(done) break;
+            }
+            if(done) pf("YES\n");
+            else pf("NO\n");
+
+        }
+        freq = map <char, int> ();
     }
     return 0;
 }

@@ -178,7 +178,7 @@ const i64 INFFF = 1e16;
 /** Implementation **/
 
 // WA code & completely wrong algorithm. :/
-
+/*
 #define Max 10000
 
 int N, arr[Max + 10];
@@ -242,5 +242,35 @@ int main(void) {
         if(n > 0) rep(i, n) pf("%d %d\n", result[i].first, result[i].second);
         result.clear();
     }
+    return 0;
+}
+*/
+
+
+#define next next_
+#define Max 20000
+int a[Max];
+int start[Max];
+int end[Max];
+
+int main() {
+#ifndef ONLINE_JUDGE
+    READ("input.txt");
+//    WRITE("output.txt");
+#endif
+    int Q = 0;
+    int n, curr;
+    SDi(n);
+    repl(i, n) SDi(a[i]);
+    repl(i, n) {
+        curr = i;
+        FOR(j, i + 1, n) if(a[curr] > a[j]) curr = j;
+        if (curr != i) {
+            reverse(a + i, a + curr + 1);
+            start[++Q] = i, end[Q] = curr;
+        }
+    }
+    println(Q);
+    repl(i, Q) print(start[i]), println(end[i]);
     return 0;
 }

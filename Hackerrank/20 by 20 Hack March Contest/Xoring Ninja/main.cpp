@@ -1,8 +1,7 @@
 /****************************************************
-***   Problem       :
+***   Problem       : Xoring Ninja
 ***   Author        : Kaidul Islam
 ***   E-mail        : ikaidul@yahoo.com
-***   University    : KUET, Dept. of CSE
 ***   Blog          : http://kaidul.efireit.com
 ****************************************************/
 #include <bits/stdc++.h>
@@ -176,47 +175,40 @@ int toggle(int N, int pos) {
 
 const i64 INFFF = 1e16;
 
-#define KMax 20
-#define Max (1 << 20)
-#define Mod 1000000009
+#define Max 100000
+#define Mod 1000000007L
 
-i64 bit[KMax], fact[Max + 1];
 
-i64 Power(i64 to, int power) {
+i64 myPow(i64 to, i64 power) {
     i64 ret = 1L;
     while(power) {
-        if(power & 1)
-            ret = (ret * to) % Mod;
-        to = (to * to) % Mod;
+        if(power & 1) {
+            ret = (ret % Mod * to % Mod) % Mod;
+        }
         power >>= 1;
+        to = (to % Mod * to % Mod) % Mod;
     }
     return ret;
 }
-
 
 int main(void) {
     int tcase, caseNo = 0;
 #ifndef ONLINE_JUDGE
     READ("input.txt");
 #endif
-    bit[0] = 1, fact[0] = 1;
-    FOR(i, 1, KMax - 1) bit[i] = bit[i- 1] << 1;
-    FOR(i, 1, Max - 1) fact[i] = (fact[i - 1] * i) % Mod;
-    int k;
-    while( ~SDi(k) ) {
-        i64 p = bit[k - 1], n = bit[k];
-        i64 A = fact[p] * fact[p] % Mod * 2 % Mod;
-        i64 C = 1, ans;
-
-        FOR(i, 1, n) {
-            if(i >= p) {
-                ans = (A * C) % Mod;
-                C = C * i % Mod * Power(i + 1 - p, Mod - 2) % Mod;
-                pf("%lld\n", ans);
-            } else
-                pf("0\n");
+    i64 N;
+    SDi(tcase);
+    i64 power, result, in;
+    while(tcase--) {
+        SDl(N); SDl(result);
+        --N;
+        rep(i, N) {
+            SDl(in);
+            result = (result | in) % Mod;
         }
-
+        power = myPow(2L, N);
+        result = (result % Mod * power % Mod) % Mod;
+        pf("%lld\n", result);
     }
     return 0;
 }

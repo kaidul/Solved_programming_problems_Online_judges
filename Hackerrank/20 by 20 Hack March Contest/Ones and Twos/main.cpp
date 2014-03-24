@@ -1,8 +1,7 @@
 /****************************************************
-***   Problem       :
+***   Problem       : Ones and Twos
 ***   Author        : Kaidul Islam
 ***   E-mail        : ikaidul@yahoo.com
-***   University    : KUET, Dept. of CSE
 ***   Blog          : http://kaidul.efireit.com
 ****************************************************/
 #include <bits/stdc++.h>
@@ -121,42 +120,6 @@ int isupper(char s) {
     if(s>='A' and s<='Z') return 1;
     return 0;
 }
-template<class T> struct Fraction {
-    T a,b;
-    Fraction(T a=0,T b=1);
-    string
-    toString();
-};//NOTES:Fraction
-template<class T> Fraction<T>::Fraction(T a,T b) {
-    T d=gcd(a,b);
-    a/=d;
-    b/=d;
-    if (b<0) a=-a, b=-b;
-    this->a=a;
-    this->b=b;
-}
-template<class T> string Fraction<T>::toString() {
-    ostringstream
-    sout;
-    sout<<a<<"/"<<b;
-    return sout.str();
-}
-template<class T> Fraction<T> operator+(Fraction<T> p,Fraction<T> q) {
-    return
-        Fraction<T>(p.a*q.b+q.a*p.b,p.b*q.b);
-}
-template<class T> Fraction<T> operator-(Fraction<T> p,Fraction<T> q) {
-    return
-        Fraction<T>(p.a*q.b-q.a*p.b,p.b*q.b);
-}
-template<class T> Fraction<T> operator*(Fraction<T> p,Fraction<T> q) {
-    return
-        Fraction<T>(p.a*q.a,p.b*q.b);
-}
-template<class T> Fraction<T> operator/(Fraction<T> p,Fraction<T> q) {
-    return
-        Fraction<T>(p.a*q.b,p.b*q.a);
-}
 
 /** BitMask **/
 int Set(int N, int pos) {
@@ -176,47 +139,27 @@ int toggle(int N, int pos) {
 
 const i64 INFFF = 1e16;
 
-#define KMax 20
-#define Max (1 << 20)
-#define Mod 1000000009
-
-i64 bit[KMax], fact[Max + 1];
-
-i64 Power(i64 to, int power) {
-    i64 ret = 1L;
-    while(power) {
-        if(power & 1)
-            ret = (ret * to) % Mod;
-        to = (to * to) % Mod;
-        power >>= 1;
-    }
-    return ret;
+//int dx[] = {0, -1, 0, 1};
+//int dy[] = {-1, 0, 1, 0};
+//int Dx[] = {0, -1, -1, -1, 0, 1, 1, 1};
+//int Dy[] = {-1, -1, 0, 1, 1, 1, 0, -1};
+int row, col;
+bool isValid(int i, int j) {
+    return i >= 0 and j >= 0 and i < row and j < col;
 }
 
+int A, B;
 
 int main(void) {
     int tcase, caseNo = 0;
 #ifndef ONLINE_JUDGE
-    READ("input.txt");
+    // READ("input.txt");
+    // WRITE("output.txt");
 #endif
-    bit[0] = 1, fact[0] = 1;
-    FOR(i, 1, KMax - 1) bit[i] = bit[i- 1] << 1;
-    FOR(i, 1, Max - 1) fact[i] = (fact[i - 1] * i) % Mod;
-    int k;
-    while( ~SDi(k) ) {
-        i64 p = bit[k - 1], n = bit[k];
-        i64 A = fact[p] * fact[p] % Mod * 2 % Mod;
-        i64 C = 1, ans;
-
-        FOR(i, 1, n) {
-            if(i >= p) {
-                ans = (A * C) % Mod;
-                C = C * i % Mod * Power(i + 1 - p, Mod - 2) % Mod;
-                pf("%lld\n", ans);
-            } else
-                pf("0\n");
-        }
-
+    SDi(tcase);
+    while(tcase--) {
+        SD2(A, B);
+        // onek kothin :/
     }
     return 0;
 }

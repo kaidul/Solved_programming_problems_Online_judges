@@ -1,5 +1,5 @@
 /****************************************************
-***   Problem       :
+***   Problem       : Travelling Salesman in a Grid
 ***   Author        : Kaidul Islam
 ***   E-mail        : ikaidul@yahoo.com
 ***   University    : KUET, Dept. of CSE
@@ -176,28 +176,24 @@ int toggle(int N, int pos) {
 
 const i64 INFFF = 1e16;
 
-#define CITY 4
-bool visited [CITY] [1 << CITY]; // is_visited
-int dp [CITY] [1 << CITY]; // cost at particular state
-// path cost - weight[i][j] denotes cost for travel from city i to j
-int weight [CITY] [CITY] = { {0, 5, 6, INF},
-                             {5, 0, INF, 7},
-                             {6, INF, 0, 8},
-                             {INF, 7, 8, 0}
-                           };
+#define CITY 200
+#define adj 4
+#define ENGAGED '1'
+#define AVAILABLE '0'
 
-int target = (1 << CITY) - 1;
-int origin;
+map <int, map<string, bool> > visited;
+map <int, map<string, int> > dp;
+int weight [CITY] [CITY];
+string target;
+int origin, N;
 int m, n;
-int dx[] = {0, -1, 0, 1};
-int dy[] = {-1, 0, 1, 0};
-bool isValid(int x, int y) {
-    return x < n and x >= 0 and y < m and y >= 0;
-}
+int dir[adj];
+bool possible = false;
 
-int tspBitmask (int node, int mask) {
-    if ( mask == target ) {
+int tspBitmask (int node, string mask) {
+    if ( !mask.compare(target) ) {
         visited [node] [mask] = true;
+        if(weight[node] [origin] != INF) possible = true;
         return dp [node] [mask] = weight[node] [origin];
     }
 
@@ -206,12 +202,20 @@ int tspBitmask (int node, int mask) {
 
     visited [node] [mask] = true;
 
-    int ret, ans = INF, v, cost;
+    int ret, ans = INF, neighbour, cost;
 
-    for ( int i = 0; i < CITY; i++ ) {
-        if ( !Check(mask, i) ) {
-            ret = weight [node][i] + tspBitmask (i, Set(mask, i) );
-            ans = min(ans, ret);
+    for(int i = 0; i < adj; ++i) {
+        neighbour = node + dir[i];
+        if(neighbour >= 0 and neighbour <= N) {
+            cost = weight[node][neighbour];
+            if(cost != INF) {
+                if ( mask[N - neighbour] == AVAILABLE ) {
+                    mask[N - neighbour] = ENGAGED;
+                    ret = tspBitmask(neighbour, mask);
+                    if(ret != INF) ans = min(ans, cost + ret);
+                    mask[N - neighbour] = AVAILABLE;
+                }
+            }
         }
     }
 
@@ -220,11 +224,50 @@ int tspBitmask (int node, int mask) {
 
 int main (void) {
 #ifndef ONLINE_JUDGE
-//    READ("input.txt");
+    READ("input.txt");
 #endif
+    int in;
     SD2(m, n);
-    memset (visited, false, sizeof visited);
-    origin = 0;
-    printf ("%d\n", tspBitmask (origin, (1 << origin) ));
+    dir[0] = -1;
+    dir[1] = -n;
+    dir[2] = 1;
+    dir[3] = n;
+    N = m * n;
+    rep(i, N) rep(j, N) weight[i][j] = INF;
+    int k = 0, x, y;
+    rep(i, m) {
+        rep(j, n - 1) {
+            SDi(in);
+            weight[k][k + 1] = weight[k + 1][k] = in;
+            ++k;
+        }
+        ++k;
+    }
+    k = 0;
+    rep(i, m - 1) {
+        rep(j, n) {
+            SDi(in);
+            x = k, y = k + n;
+            weight[k][k + n] = weight[k + n][k] = in;
+            ++k;
+        }
+    }
+    int ans;
+    if((m == 1 and n == 2) or (n == 1 and m == 2)) {
+        ans = weight[0][1] + weight[1][0];
+        println(ans);
+    } else if((m == 1 and n > 2) or (n == 1 and m > 2)) {
+        pf("0\n");
+    } else {
+        string mask = "";
+        target = "";
+        rep(i, N) mask += AVAILABLE, target += ENGAGED;
+        origin = 0;
+        --N;
+        mask[N] = ENGAGED;
+        ans = tspBitmask(origin, mask);
+        if(possible) println(ans);
+        else pf("0\n");
+    }
     return 0;
 }
