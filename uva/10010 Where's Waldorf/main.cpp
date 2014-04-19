@@ -168,11 +168,9 @@ int main(void) {
         getc(stdin);
         rep(i, row) {
             indx = 0;
-            do {
-                c = getchar();
+            while((c = getchar()) != '\n')
                 grid[i][indx++] = tolower(c);
-            } while (c != '\n');
-            grid[i][indx - 1] = '\0';
+            grid[i][indx] = '\0';
         }
         SDi(q);
         getc(stdin);
@@ -180,11 +178,9 @@ int main(void) {
         initialize(pTrie);
         rep(i, q) {
             indx = 0;
-            do {
-                c = getchar();
+            while((c = getchar()) != '\n')
                 words[i][indx++] = tolower(c);
-            } while (c != '\n');
-            words[i][indx - 1] = '\0';
+            words[i][indx] = '\0';
             insert(pTrie, words[i]);
         }
         int index, posX, posY;

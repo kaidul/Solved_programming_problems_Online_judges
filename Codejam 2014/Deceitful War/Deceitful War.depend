@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1397340146 source:e:\c++\workspace\solved_programming_problems_online_judges\codejam 2014\deceitful war\main.cpp
+	<iostream>
+	<vector>
+	<cstring>
+	<cstdio>
+	<algorithm>
+

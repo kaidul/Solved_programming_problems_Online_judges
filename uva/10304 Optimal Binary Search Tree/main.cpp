@@ -1,4 +1,3 @@
-// Dynamic Programming code for Optimal Binary Search Tree Problem
 #include <stdio.h>
 #include <limits.h>
 

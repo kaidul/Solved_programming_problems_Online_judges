@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1396095745 source:e:\c++\workspace\topcoder\typocoderdiv2.cpp
+	<bits/stdc++.h>
+
+1396230068 source:e:\c++\workspace\topcoder\leftandrighthandeddiv2.cpp
+	<bits/stdc++.h>
+
+1396232141 source:e:\c++\workspace\topcoder\emoticonsdiv2.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1396233783 source:e:\c++\workspace\topcoder\microstrings.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1396233954 source:e:\c++\workspace\topcoder\minimumsquareeasy.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1396299094 source:e:\c++\workspace\topcoder\tarostring.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1396660798 source:e:\c++\workspace\topcoder\longlongtripdiv2.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1396661122 source:e:\c++\workspace\topcoder\amebadiv2.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1396662903 source:e:\c++\workspace\topcoder\mergestrings.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+
+1397148982 source:e:\c++\workspace\solved_programming_problems_online_judges\topcoder\colorfulcoinseasy.cpp
+	<bits/stdc++.h>
+	<ctime>
+	<cmath>
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
+	<algorithm>
+

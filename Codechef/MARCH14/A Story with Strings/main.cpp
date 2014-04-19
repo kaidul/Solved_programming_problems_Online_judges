@@ -138,14 +138,17 @@ int main(void) {
 
 #define maxN 250005
 #define maxState (maxN << 1)
+#define Alphabet 26
 
 struct State {
-    State *go[26], *suffix;
+    State *next[Alphabet]; // //Links to next transition state in the DAWG (Directed acyclic word graph)
+    State *suffix; // //Link to previous transition state in the DAWG
     int depth, id;
     long long cnt;
 };
-State pool[maxState], *point, *root, *sink;
-int size;
+State pool[maxState]; // pool of states, from where you can pick a raw state to include in the DAWG
+State *point, *root, *sink;
+int size; // number of states present in the DAWG.
 
 State *newState(int dep) {
     point->id = size++;
@@ -154,32 +157,33 @@ State *newState(int dep) {
 }
 
 void init() {
+//    mem(pool, 0);
     point = pool;
     size = 0;
     root = sink = newState(0);
 }
 
-void insert(int a) {
-    State *p = newState(sink->depth+1);
+void extend(int a) {
+    State *p = newState(sink->depth + 1);
     State *cur = sink, *sufState;
-    while (cur && !cur->go[a]) {
-        cur->go[a] = p;
+    while (cur and !cur->next[a]) {
+        cur->next[a] = p;
         cur = cur->suffix;
     }
     if (!cur)
         sufState = root;
     else {
-        State *q = cur->go[a];
+        State *q = cur->next[a];
         if (q->depth == cur->depth + 1)
             sufState = q;
         else {
             State *r = newState(cur->depth+1);
-            memcpy(r->go, q->go, sizeof(q->go));
+            memcpy(r->next, q->next, sizeof(q->next));
             r->suffix = q->suffix;
             q->suffix = r;
             sufState = r;
-            while (cur && cur->go[a] == q) {
-                cur->go[a] = r;
+            while (cur and cur->next[a] == q) {
+                cur->next[a] = r;
                 cur = cur->suffix;
             }
         }
@@ -187,8 +191,6 @@ void insert(int a) {
     p->suffix = sufState;
     sink = p;
 }
-
-char ch[maxN];
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -199,17 +201,18 @@ int main() {
     init();
     int len = S1.length();
     for (int i = 0; i < len; i++)
-        insert(S1[i]-'a');
+        extend(S1[i]-'a');
 
+    // LCS between two strings
     len = S2.length();
     int indx, length = 0, Max = 0;
     State *cur = root;
     for (int i = 0; i < len; i++) {
-        if (cur->go[S2[i]-'a']) {
+        if (cur->next[S2[i] - 'a']) {
             length++;
-            cur = cur->go[S2[i]-'a'];
+            cur = cur->next[S2[i] - 'a'];
         } else {
-            while (cur && !cur->go[S2[i]-'a'])
+            while (cur and !cur->next[S2[i] - 'a'])
                 cur = cur->suffix;
 
             if (!cur) {
@@ -217,22 +220,16 @@ int main() {
                 length = 0;
             } else {
                 length = cur->depth + 1;
-                cur = cur->go[S2[i]-'a'];
+                cur = cur->next[S2[i] - 'a'];
             }
         }
         if(length > Max) {
             Max = length;
             indx = i - length + 1;
         }
-        if(length == Max) {
-            int idx = i - length + 1;
-            if(idx < indx) indx = idx;
-        }
     }
-
     if(Max > 0)
         pf("%s\n", S2.substr(indx, Max).c_str());
     println(Max);
     return 0;
 }
-
