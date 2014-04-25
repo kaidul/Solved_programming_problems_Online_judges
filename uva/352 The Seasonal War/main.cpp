@@ -5,19 +5,16 @@ using namespace std;
 #define Max 30
 
 int dimension;
-char a [Max][Max];
+char a[Max][Max];
 
 struct point {
     int x, y;
-    point() {}
-    point(int _x, int _y) {
-        x = _x, y = _y;
-    }
+    point(int a, int b): x(a), y(b) {}
 };
 queue <point> q;
 
-int dirX[] = {0, -1, -1, -1, 0, 1, 1, 1},
-           dirY[] = {-1, -1, 0, 1, 1, 1, 0, -1};
+int dirX[] = {0, -1, -1, -1, 0, 1, 1, 1};
+int dirY[] = {-1, -1, 0, 1, 1, 1, 0, -1};
 
 void dfs (int x, int y) {
     q.push (point(x, y));
