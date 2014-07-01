@@ -92,33 +92,30 @@ struct result {
 } results[25];
 int q;
 
-#define ALPHABET_SIZE (26)
+#define ALPHABET_SIZE 26
 #define CHAR_TO_INDEX(c) ((int)c - (int)'a')
 
 // trie node
-typedef struct trie_node trie_node_t;
 struct trie_node {
     int value;
-    trie_node_t *children[ALPHABET_SIZE];
+    trie_node *children[ALPHABET_SIZE];
 };
 
 // trie ADT
-typedef struct trie trie_t;
 struct trie {
-    trie_node_t *root;
+    trie_node *root;
     int count;
 };
 
 // Returns new trie node (initialized to NULLs)
-trie_node_t *getNode(void) {
-    trie_node_t *pNode = NULL;
+trie_node *getNode(void) {
+    trie_node *pNode = NULL;
 
-    pNode = (trie_node_t *)malloc(sizeof(trie_node_t));
+    pNode = (trie_node *)malloc(sizeof(trie_node));
 
     if( pNode ) {
-        int i;
         pNode->value = 0;
-        for(i = 0; i < ALPHABET_SIZE; i++) {
+        for(int i = 0; i < ALPHABET_SIZE; i++) {
             pNode->children[i] = NULL;
         }
     }
@@ -126,24 +123,20 @@ trie_node_t *getNode(void) {
 }
 
 // Initializes trie (root is dummy node)
-void initialize(trie_t *pTrie) {
+void initialize(trie *pTrie) {
     pTrie->root = getNode();
     pTrie->count = 0;
 }
 
 // If not present, inserts key into trie
 // If the key is prefix of trie node, just marks leaf node
-void insert(trie_t *pTrie, char key[]) {
-    int level;
-    int length = strlen(key);
-    int index;
-    trie_node_t *pCrawl;
-
+void insert(trie *pTrie, char key[]) {
+    trie_node *pCrawl;
     pTrie->count++;
     pCrawl = pTrie->root;
 
-    for( level = 0; level < length; level++ ) {
-        index = CHAR_TO_INDEX(key[level]);
+    for(int level = 0, length = strlen(key); level < length; level++ ) {
+        int index = CHAR_TO_INDEX(key[level]);
         if( !pCrawl->children[index] ) {
             pCrawl->children[index] = getNode();
         }
@@ -159,7 +152,7 @@ int main(void) {
     // WRITE("out.txt");
 #endif
     int tcase, caseNo = 0;
-    trie_t trie;
+    trie Trie;
     int indx, n = ARRAY_SIZE(Dx);
     char c;
     SDi(tcase);
@@ -174,7 +167,7 @@ int main(void) {
         }
         SDi(q);
         getc(stdin);
-        trie_t *pTrie = &trie;
+        trie *pTrie = &Trie;
         initialize(pTrie);
         rep(i, q) {
             indx = 0;
@@ -184,7 +177,7 @@ int main(void) {
             insert(pTrie, words[i]);
         }
         int index, posX, posY;
-        trie_node_t *pCrawl, *start;
+        trie_node *pCrawl, *start;
         rep(i, row) {
             rep(j, col) {
                 c = grid[i][j];
@@ -223,7 +216,7 @@ int main(void) {
             ans = results[i];
             print(ans.m + 1);
             println(ans.n + 1);
-            results[i] = result();
+            results[i] = result(); // reseting
         }
         if(tcase) newLine;
     }
