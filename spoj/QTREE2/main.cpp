@@ -48,7 +48,7 @@ typedef unsigned long long ui64;
 //Complexity: O(NlgN,lgN)
 #define Max 100002
 int depth[Max]; // depth of every node from root. depth[i] denotes depth of node i
-int table[Max][22]; // sparse table. there will be n rows for n nodes and logn columns for every node. pre-processing complexity O(nlogn) and Query complexity logn. table[i][j] holds 2^j th parent of ith node.
+int table[Max][22]; // sparse table. there will be n rows for n nodes and logn columns for every node. pre-processing complexity O(nlogn) and Query complexity O(logn). table[i][j] holds 2^j th parent of ith node.
 int parent[Max]; // parent of node. parent[x] = y denotes y is parent of x
 vector <int> adj[Max]; // to store grpah
 void dfs(int from, int u, int dep) {
@@ -110,7 +110,7 @@ int main(void) {
     adj[12].pb(13);
     adj[12].pb(16);
 
-    dfs(-1, 0, 0);
+    dfs(0, 0, 0);
     lca_init(17);
     println( lca_query(14, 11) );
 

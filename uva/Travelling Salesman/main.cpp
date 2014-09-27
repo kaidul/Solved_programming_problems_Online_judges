@@ -55,7 +55,7 @@ int tspBitmask (int node, int mask) {
     return dp [node] [mask] = ans;
 }
 
-int main () {
+int main (void) {
     memset (visited, false, sizeof visited);
     origin = 0;
     printf ("%d\n", tspBitmask (origin, (1 << origin) ));

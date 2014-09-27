@@ -5,6 +5,7 @@ using namespace std;
 
 vector <int> a;
 
+// kadane(&start, &end);
 int kadane(int *start, int *end) {
     int max_so_far = INT_MIN, max_ending_here = 0, size = a.size();
     *start = 0;

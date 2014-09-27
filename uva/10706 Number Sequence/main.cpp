@@ -1,5 +1,4 @@
-#include <cstdio>
-#include <map>
+#include <bits/stdc++.h>
 using namespace std;
 
 inline int digit(int n) {
@@ -23,7 +22,8 @@ int main() {
 #endif
     long long sum[40000], len[40000];
     for (long long i = 1, j = 0; j < 2147483647; i++) {
-        len[i] = digit(i);
+//        len[i] = digit(i);
+        len[i] = i > 0 ? (int) log10 ((double) i) + 1 : 1;
         sum[i] = sum[i - 1] + len[i];
         j += sum[i];
     }
@@ -34,6 +34,7 @@ int main() {
         scanf("%d", &n);
         for (i = 0; n > sum[i]; n -= sum[i++]);
         for (i = 1; n > len[i]; n -= len[i++]);
+
         printf("%d\n", digitOf(i, n));
     }
     return 0;

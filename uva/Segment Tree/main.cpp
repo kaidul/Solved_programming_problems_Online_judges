@@ -40,10 +40,10 @@ void buildHelper( RequestCode code, int node, int begin, int end ) {
         else segment_tree[node] = begin;
         return;
     }
-    int leftIndx = 2 * node, rightIndx = 2 * node + 1;
+    int leftIndx = node << 1, rightIndx = leftIndx | 1, middle = (begin + end) >> 1;
 
-    buildHelper(code, leftIndx, begin, (begin + end) / 2);
-    buildHelper(code, rightIndx, (begin + end) / 2 + 1, end);
+    buildHelper(code, leftIndx, begin, middle);
+    buildHelper(code, rightIndx, middle + 1, end);
 
     int lContent = segment_tree[leftIndx], rContent = segment_tree[rightIndx];
 
@@ -70,8 +70,9 @@ int queryHelper(RequestCode code, int node, int begin, int end, int i, int j) {
     if (begin >= i && end <= j) return segment_tree[node];
 
     // compute the minimum position in the left and right part of the interval
-    int pos1 = queryHelper(code, 2 * node, begin, (begin + end) / 2, i, j);
-    int pos2 = queryHelper(code, 2 * node + 1, (begin + end) / 2 + 1, end, i, j);
+    int leftIndx = node << 1, rightIndx = leftIndx | 1, middle = (begin + end) >> 1;
+    int pos1 = queryHelper(code, leftIndx, begin, middle, i, j);
+    int pos2 = queryHelper(code, rightIndx, middle + 1, end, i, j);
 
     // return the position where the overall minimum is
     if(pos1 == -1) return pos2; // can happen if we try to access segment outside query
@@ -108,10 +109,10 @@ void updateHelper(RequestCode code, int node, int begin, int end, int index, int
         else segment_tree[node] = begin;
         return;
     }
-    int leftIndx = node * 2, rightIndx = node * 2 + 1;
+    int leftIndx = node << 1, rightIndx = leftIndx | 1, middle = (begin + end) >> 1;
 
-    updateHelper(code, leftIndx, begin, ( begin + end ) / 2, index, value );
-    updateHelper(code, rightIndx, ( begin + end ) / 2 + 1, end, index, value );
+    updateHelper(code, leftIndx, begin, middle, index, value );
+    updateHelper(code, rightIndx, middle + 1, end, index, value );
 
     int lContent = segment_tree[leftIndx], rContent = segment_tree[rightIndx];
 
