@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1367835570 source:c:\kaidul\c++ workspace\uva\kadane\main.cpp
-	<stdio.h>
-
-1368329313 source:e:\c++\workspace\uva\kadane\main.cpp
-	<cstdio>
-	<iostream>
-	<vector>
-

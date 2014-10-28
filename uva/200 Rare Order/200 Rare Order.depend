@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1414500755 source:d:\c++\workspace\solved_programming_problems_online_judges\uva\200 rare order\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<vector>
+	<stack>
+

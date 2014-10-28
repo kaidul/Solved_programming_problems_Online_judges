@@ -1,0 +1,26 @@
+<html><body bgcolor="#ffffff" text="#000000"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><p>Cat Snuke is playing the Path Game.</p>
+<br></br>
+<p>The Path Game is played on a rectangular grid of square cells.
+The grid has 2 rows and some positive number of columns.
+Each cell is either black or white.</p>
+<br></br>
+<p>A left-to-right path in the grid is a sequence of white cells such that the first cell in the sequence is in the leftmost column, the last cell in the sequence is in the rightmost column, and each pair of consecutive cells shares a common side.</p>
+<br></br>
+<p>The initial coloring of the grid is such that there is at least one left-to-right path.
+You are given this initial coloring as a vector &lt;string&gt; <b>board</b> with two elements.
+For each i and j, <b>board</b>[i][j] is either '#' (representing a black cell) or '.' (representing a white cell).</p>
+<br></br>
+<p>Snuke may color some of the white cells black.
+After he does so, there must still be at least one left-to-right path left on the board.
+The goal of the game is to color as many cells black as possible.
+Compute and return the largest number of cells Snuke can color black.
+(Note that the cells that are already black do not count.)</p></td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>PathGameDiv2</td></tr><tr><td>Method:</td><td>calc</td></tr><tr><td>Parameters:</td><td>vector &lt;string&gt;</td></tr><tr><td>Returns:</td><td>int</td></tr><tr><td>Method signature:</td><td>int calc(vector &lt;string&gt; board)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>256</td></tr></table></td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td><b>board</b> will contain 2 elements.</td></tr><tr><td align="center" valign="top">-</td><td>Each element in <b>board</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>All elements in <b>board</b> will have the same length.</td></tr><tr><td align="center" valign="top">-</td><td>Each character in <b>board</b> will be '#' or '.'.</td></tr><tr><td align="center" valign="top">-</td><td>The grid described by <b>board</b> will contain a left-to-right path.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;#....&quot;
+,&quot;...#.&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 2</pre></td></tr><tr><td><table><tr><td colspan="2">Snuke can color at most two white cells black.
+One possible final state of the board looks as follows:
+<pre>
+#....
+..###
+</pre></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;#&quot;
+,&quot;.&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 0</pre></td></tr><tr><td><table><tr><td colspan="2">Snuke can't color any cells.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;.&quot;
+,&quot;.&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 1</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;....#.##.....#...........&quot;
+,&quot;..#......#.......#..#....&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 13</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>
