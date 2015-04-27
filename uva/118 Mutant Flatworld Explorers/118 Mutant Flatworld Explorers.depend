@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1427610632 source:d:\c++\workspace\solved_programming_problems_online_judges\118 mutant flatworld explorers\main.cpp
+	<cstring>
+	<cstdio>
+	<iostream>
+	<unordered_map>
+

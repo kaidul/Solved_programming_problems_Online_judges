@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1424282107 source:d:\c++\workspace\solved_programming_problems_online_judges\codeforces\#291 div 2\c\main.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cmath>
+	<ctime>
+	<cstring>
+	<cassert>
+	<algorithm>
+	<vector>
+	<set>
+	<map>
+	<bitset>
+	<queue>
+	<deque>
+	<complex>
+

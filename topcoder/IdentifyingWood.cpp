@@ -1,6 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 struct IdentifyingWood {
 	string check(string s, string t)  {
-		
+		int n = s.length();
+		int m = t.length();
+		string result[] = {"Nope.", "Yep, it's wood."};
+		if(m > n) return result[0];
+		if(m == n and s != t) return result[0];
+		int i = 0, j = 0;
+		while(i < n and j < m) {
+            if(s[i] == t[j]) {
+                i++, j++;
+            } else {
+                i++;
+            }
+		}
+		return result[j == m];
 	}
 };
 // BEGIN CUT HERE
@@ -15,7 +32,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	if (argc == 1) 
+	if (argc == 1)
 	{
 		cout << "Testing IdentifyingWood (250.0 points)" << endl << endl;
 		for (int i = 0; i < 20; i++)

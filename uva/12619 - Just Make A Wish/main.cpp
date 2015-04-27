@@ -32,15 +32,16 @@ void RSieve(i64 N) {
     i64 i, j, sqrtN;
     sqrtN = i64( sqrt( N ) );
     for( i = 3; i <= sqrtN; i += 2 ) {
-        if( Check(status[i>>5],i&31)==0) {
-            for( j = i*i; j <= N; j += (i<<1) ) {
-                status[j>>5]=Set(status[j>>5],j & 31)   ;
+        if( Check(status[i >> 5], i & 31) == 0) {
+            for( j = i * i; j <= N; j += (i << 1) ) {
+                status[j >> 5] = Set(status[j >> 5], j & 31);
             }
         }
     }
     primeList.pb(2);
-    for(i=3; i<=N; i+=2)
-        if( !Check(status[i>>5], i&31)) primeList.pb(i);
+    for(i = 3; i <= N; i += 2)
+        if( !Check(status[i >> 5], i & 31))
+            primeList.pb(i);
 }
 
 i64 d(int n, bool code) {
@@ -73,18 +74,22 @@ i64 d(int n, bool code) {
 
 
 int main() {
+#ifndef ONLINE_JUDGE
     READ("in.txt");
-    RSieve(Max);
+#endif // ONLINE_JUDGE
     int tcase, caseNo = 1;
     int factor, result, n;
+
+    RSieve(Max);
+
     SDi(tcase);
     while(tcase--) {
-        primeFactor.clear(), result = 0;
+        primeFactor.clear();
+        result = 0;
         SDi(n);
         rep(i, n) {
             SDi(factor);
-            if(factor < 0) result += d(abs(factor), 0) % Mod;
-            else result += d(factor, 1) % Mod;
+            result += d(abs(factor), (factor > 0)) % Mod;
         }
         pf("Case %d: %d\n", caseNo, result % Mod);
         caseNo++;

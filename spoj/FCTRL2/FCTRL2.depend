@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1418727528 source:d:\c++\workspace\solved_programming_problems_online_judges\spoj\fctrl2\main.cpp
+	<iostream>
+	<vector>
+	<cstdio>
+	<algorithm>
+	<fstream>
+

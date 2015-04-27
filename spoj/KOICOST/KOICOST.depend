@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1428844386 source:d:\c++\workspace\solved_programming_problems_online_judges\spoj\koicost\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<fstream>
+	<algorithm>
+

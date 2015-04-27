@@ -1,26 +1,22 @@
 #include <bits\stdc++.h>
 
 using namespace std;
-
+#define DEBUG 1
 #define Max 31
 #define N 21
 struct playerInfo {
     string name;
     int shot, height;
     playerInfo() {}
-    playerInfo(string a, int b, int c) {
-        name =  a;
-        shot = b;
-        height = c;
-    }
-    bool operator < (const playerInfo &a) const {
-        if(shot == a.shot) return height > a.height;
-        return shot > a.shot;
+    playerInfo(string a, int b, int c) : name(a), shot(b), height(c) {}
+    bool operator < (playerInfo const& other) const {
+        if(shot == other.shot) return height > other.height;
+        return shot > other.shot;
     }
 } player[Max];
 
 int main(void) {
-#ifndef ONLINE_JUDGE
+#ifdef DEBUG
     freopen("input.txt", "r", stdin);
     freopen("basketball_game.txt", "w", stdout);
 #endif
@@ -47,27 +43,18 @@ int main(void) {
                 result.pop();
             }
             putchar('\n');
-//            waitingA, waitingB = queue < string > ();
             continue;
         }
         sort(player, player + n);
-//        putchar('\n');
-//        for (int i = 0; i < n; i++) {
-//        	printf("%s\n", player[i].name.c_str());
-//        }
-//        putchar('\n');
         for (int i = 2 * p - 1; i >= 0; i--) {
-            //printf("%s\n", player[i].name);
-            if(i % 2) teamB.push( player[i].name );
+            if(i & 1) teamB.push( player[i].name );
             else teamA.push( player[i].name );
         }
         for (int i = 2 * p; i < n; i++) {
-            //printf("%s\n", player[i].name);
-            if(i % 2) waitingB.push( player[i].name );
+            if(i & 1) waitingB.push( player[i].name );
             else waitingA.push( player[i].name );
         }
         string out, in;
-        //++m;
         while (m--) {
             out = teamA.front();
             teamA.pop();
@@ -84,12 +71,10 @@ int main(void) {
             waitingB.push(out);
         }
         while ( !teamA.empty() ) {
-            //printf("%s ", teamA.front());
             result.push( teamA.front() );
             teamA.pop();
         }
         while ( !teamB.empty() ) {
-            //printf("%s ", teamB.front());
             result.push( teamB.front() );
             teamB.pop();
         }
@@ -98,7 +83,6 @@ int main(void) {
             result.pop();
         }
         putchar('\n');
-//        waitingA, waitingB = queue < string > ();
     }
     return 0;
 }

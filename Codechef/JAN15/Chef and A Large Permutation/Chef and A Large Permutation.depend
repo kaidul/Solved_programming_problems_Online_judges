@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1420999288 source:d:\c++\workspace\solved_programming_problems_online_judges\codechef\jan15\chef and a large permutation\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<cstdio>
+	<fstream>
+	<cstring>
+	<set>
+	<unordered_map>
+	<algorithm>
+

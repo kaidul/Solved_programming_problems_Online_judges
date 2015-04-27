@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1423381369 source:d:\c++\workspace\solved_programming_problems_online_judges\codeforces\rockethon\b\main.cpp
+	<cstring>
+	<vector>
+	<list>
+	<map>
+	<set>
+	<deque>
+	<stack>
+	<bitset>
+	<algorithm>
+	<functional>
+	<numeric>
+	<utility>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<cstdio>
+	<cmath>
+	<cstdlib>
+	<ctime>
+	<memory.h>
+	<cassert>
+

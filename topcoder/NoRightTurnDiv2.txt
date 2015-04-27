@@ -1,0 +1,47 @@
+<html><body bgcolor="#ffffff" text="#000000"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><p>
+Roger the Robot has been sent to explore a planet. 
+The surface of the planet can be thought of as a two-dimensional plane. 
+You are given two vector &lt;int&gt;s <b>x</b> and <b>y</b>.
+The planet has N interesting points described by these vector &lt;int&gt;s.
+The i-th interesting point has coordinates (<b>x</b>[i], <b>y</b>[i]).
+No three interesting points will be collinear.
+</p>
+
+<p>
+Roger will choose a permutation of {0,1,...,N-1}, and will visit the points in that order.
+Roger will travel in a straight line in between points. There are two conditions he must follow:
+<ol>
+<li>He must never cross his own path (that is, if we look at the line segments formed by the path, no two segments strictly intersect). </li>
+<li> Due to rather unfortunate oversight, Roger is incapable of making any right turns. This means that for any three consecutive points that he visits, these three points constitute a counter-clockwise orientation. </li>
+</ol>
+</p>
+
+<p>
+Your job is to find a path that Roger can take.
+If there is no valid path, return an empty vector &lt;int&gt;.
+Otherwise, return an vector &lt;int&gt; containing a permutation of 0,...,N-1, representing a valid path that Roger can take.
+
+</p>
+</td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>NoRightTurnDiv2</td></tr><tr><td>Method:</td><td>findPath</td></tr><tr><td>Parameters:</td><td>vector &lt;int&gt;, vector &lt;int&gt;</td></tr><tr><td>Returns:</td><td>vector &lt;int&gt;</td></tr><tr><td>Method signature:</td><td>vector &lt;int&gt; findPath(vector &lt;int&gt; x, vector &lt;int&gt; y)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>256</td></tr><tr><td>Stack limit (MB):</td><td>256</td></tr></table></td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td><b>x</b> will contain between 2 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td><b>y</b> will contain exactly the same number of elements as <b>x</b>.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>x,y</b> will be between -1,000 and 1,000, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>All pairs (<b>x</b>[i], <b>y</b>[i]) will be distinct.</td></tr><tr><td align="center" valign="top">-</td><td>No three points will be collinear.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-10, 0, 10}</pre></td></tr><tr><td><pre>{10, -10, 10}</pre></td></tr></table></td></tr><tr><td><pre>Returns: {0, 1, 2 }</pre></td></tr><tr><td><table><tr><td colspan="2">The points form a triangle.
+Any of the following return values will be accepted: {0,1,2},{1,2,0},{2,0,1}</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{0,0,-3,-3,3,3}</pre></td></tr><tr><td><pre>{-1,1,-3,3,-3,3}</pre></td></tr></table></td></tr><tr><td><pre>Returns: {0, 4, 5, 3, 2, 1 }</pre></td></tr><tr><td><table><tr><td colspan="2"><p>
+Here is a picture of the points:
+</p>
+
+<p>
+<img src="http://i1370.photobucket.com/albums/ag268/lg52931/a_zpsgguwpuv9.png"></img>
+</p>
+
+<p>
+Here is an example of a different valid solution. This would correspond to a return value of {1,5,3,2,4,0}
+</p>
+
+<p>
+<img src="http://i1370.photobucket.com/albums/ag268/lg52931/b_zps3agd4fh7.png"></img>
+</p></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{10,9,8,7,6,5,4,3,2,1}</pre></td></tr><tr><td><pre>{1,4,9,16,25,36,49,64,81,100}</pre></td></tr></table></td></tr><tr><td><pre>Returns: {9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{0, 2,-2, 4,-4, 2,-2, 0}</pre></td></tr><tr><td><pre>{1, 2, 2, 4, 4, 6, 6, 5}</pre></td></tr></table></td></tr><tr><td><pre>Returns: {4, 2, 0, 1, 3, 5, 6, 7 }</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">4)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-76,98,83,58,-15,94,21,55,80,84,-39,-90,-46,100,-80,-49,-2,-70,36,48,88,10,
+55,-56,22,67,31,81,100,-39,64,-62,-7,45,-82,-24,51,-33,53,11,20,-74,-83,47,
+9,39,42,63,-97,94}</pre></td></tr><tr><td><pre>{-90,68,91,-92,-6,88,99,10,39,-69,-61,-4,71,-5,90,-51,21,-53,-21,-86,41,-9,
+42,-23,-4,12,94,-59,55,18,70,-88,-86,-17,-97,-33,87,80,91,-80,-79,-79,-78,
+-99,57,67,-52,-46,61,-10}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 
+{39, 32, 40, 31, 19, 27, 47, 46, 0, 34, 43, 3, 9, 13, 28, 1, 5, 2, 6,
+ 14, 48, 42, 41, 49, 20, 38, 26, 37, 12, 11, 17, 10, 33, 25, 8, 30, 36,
+ 44, 29, 23, 15, 18, 7, 22, 45, 16, 4, 35, 24, 21 }</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>

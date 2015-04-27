@@ -2,9 +2,52 @@
 
 using namespace std;
 
+#define MAXN 55
+
+struct node {
+    int x;
+    int y;
+    int level;
+    node() : x(0), y(0), level(0) {}
+    node(int a, int b, int c) : x(a), y(b), level(c) {}
+};
+
+bool visited[MAXN][MAXN];
+queue<node> Q;
+int dx[] = {0, 1};
+int dy[] = {1, 0};
+int n;
+void init() {
+    while(!Q.empty()) Q.pop();
+}
+
 struct PathGameDiv2 {
+    int bfs(int x, int y, int X, int Y, int level) {
+        init();
+        Q.push(node(x, y, 0));
+        visited[x][y] = true;
+        while(!Q.empty()) {
+            if(Q.front().x == X and Q.front().y == Y) return Q.front().level;
+            int level = Q.front().level;
+            for(int i = 0; i < 2; ++i) {
+                int xx = x + dx[i], yy = y + dy[i];
+                if(xx >= 2 or xx < 0 or yy < 0 or yy >= n or board[xx][yy] == '#' or visited[xx][yy]) continue;
+                visited[xx][yy] = true;
+                Q.push(xx, yy, level + 1);
+            }
+            Q.pop();
+        }
+        return -1;
+    }
 	int calc(vector <string> board)  {
-		
+		n = board[0].size();
+		int result = 2 * n;
+		for(int i = 0; i < 2; ++i) {
+            for(int j = 0; j < n; ++j) {
+                if(board[i][j] == '#') result--;
+            }
+		}
+
 	}
 };
 // BEGIN CUT HERE
@@ -19,7 +62,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	if (argc == 1) 
+	if (argc == 1)
 	{
 		cout << "Testing PathGameDiv2 (500.0 points)" << endl << endl;
 		for (int i = 0; i < 20; i++)

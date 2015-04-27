@@ -1,0 +1,32 @@
+<html><body bgcolor="#ffffff" text="#000000"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><p>Cat Snuke and wolf Sothe are playing the Greater Game.
+The game is played with cards.
+Each card has a number written on it.
+There are 2N cards.
+The numbers on the cards are the integers between 1 and 2N, inclusive.</p>
+<br></br>
+<p>At the beginning of the game, each player gets N of the cards and chooses the order in which he wants to play them.
+The game then consists of N turns.
+In each turn, both players play one of their cards simultaneously.
+The player who revealed the card with the larger number gets a point.</p>
+<br></br>
+<p>You are given a vector &lt;int&gt; <b>hand</b>.
+The elements of <b>hand</b> are the numbers on Snuke's cards.
+He can play those cards in any order he chooses.</p>
+<br></br>
+<p>Obviously, Snuke can determine the numbers on Sothe's cards, but he does not necessarily know the order in which Sothe is going to play his cards.
+You are given the information Snuke has about Sothe in a vector &lt;int&gt; <b>sothe</b>.
+For each i, element i of <b>sothe</b> is either the number on the card Sothe will play in turn i (0-based index), or -1 if Snuke does not know the card Sothe will play in that turn.</p>
+<br></br>
+<p>Snuke wants to play according to a strategy that maximizes the expected number of points he'll get.
+Find that strategy and return the corresponding expected number of Snuke's points at the end of the game.</p>
+<br></br>
+<p>As shown in Example 0, the optimal strategy for Snuke may involve some random decisions.
+However, note that before the game starts Snuke must choose the order in which he is going to play all his cards.
+He is not allowed to change their order after he sees some of the cards played by Sothe.</p></td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>GreaterGame</td></tr><tr><td>Method:</td><td>calc</td></tr><tr><td>Parameters:</td><td>vector &lt;int&gt;, vector &lt;int&gt;</td></tr><tr><td>Returns:</td><td>double</td></tr><tr><td>Method signature:</td><td>double calc(vector &lt;int&gt; hand, vector &lt;int&gt; sothe)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>256</td></tr></table></td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td>N will be between 1 and 50, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td><b>hand</b> and <b>sothe</b> will contain exactly N elements each.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>hand</b> will be an integer between 1 and 2N, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>sothe</b> will be either -1, or an integer between 1 and 2N, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>The positive integers in <b>hand</b> and <b>sothe</b> will be distinct.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{4,2}</pre></td></tr><tr><td><pre>{-1,-1}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 1.5</pre></td></tr><tr><td><table><tr><td colspan="2">Sothe will play the cards 1 and 3 in some unknown order.
+The best strategy for Snuke is to flip a coin and to play his cards either in the order {2,4} or in the order {4,2} with equal probability.
+This leads to two equally likely results of the game:
+<ul>
+<li>Snuke plays his 2 against Sothe's 1, and his 4 against Sothe's 3. In this case, Snuke wins both turns and thus scores 2 points.</li>
+<li>Snuke plays his 2 against Sothe's 3, and his 4 against Sothe's 1. In this case, Snuke scores 1 point.</li>
+</ul>
+Therefore, the expected number of Snuke's points is 1.5.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{4,2}</pre></td></tr><tr><td><pre>{1,3}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 2.0</pre></td></tr><tr><td><table><tr><td colspan="2">If Snuke plays card 2 first and card 4 next, he is guaranteed to score 2 points.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{2}</pre></td></tr><tr><td><pre>{-1}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 1.0</pre></td></tr><tr><td><table><tr><td colspan="2">Sothe's only card has to be 1, and thus Snuke is guaranteed to win the only turn of this game.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{1,3,5,7}</pre></td></tr><tr><td><pre>{8,-1,4,-1}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 2.5</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">4)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{6,12,17,14,20,8,16,7,2,15}</pre></td></tr><tr><td><pre>{-1,-1,4,-1,11,3,13,-1,-1,18}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 8.0</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>

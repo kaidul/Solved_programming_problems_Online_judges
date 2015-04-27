@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1428953221 source:d:\c++\workspace\solved_programming_problems_online_judges\11902 dominator\main.cpp
+	<iostream>
+	<vector>
+	<cstdio>
+	<fstream>
+
